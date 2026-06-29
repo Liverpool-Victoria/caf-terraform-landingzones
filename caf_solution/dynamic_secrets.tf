@@ -1,6 +1,5 @@
 module "dynamic_keyvault_secrets" {
-  source  = "aztfmod/caf/azurerm//modules/security/dynamic_keyvault_secrets"
-  version = "5.7.12"
+  source  = "git::https://github.com/Liverpool-Victoria/terraform-azurerm-caf.git//modules/security/dynamic_keyvault_secrets?ref=postgres18"
 
   for_each = {
     for keyvault_key, secrets in try(var.dynamic_keyvault_secrets, {}) : keyvault_key => {
