@@ -64,7 +64,6 @@ variable "provider_azurerm_features_template_deployment" {
 variable "provider_azurerm_features_virtual_machine" {
   default = {
     delete_os_disk_on_deletion     = true
-    graceful_shutdown              = false
     skip_shutdown_and_force_delete = false
   }
 }
